@@ -572,23 +572,27 @@
               throw new Error(callee + " - width (" + box.width + ") and height (" + box.height + ") must be positive numbers");
           }
       };
-      Object.defineProperty(Box.prototype, "x", {
+     Object.defineProperty(Box.prototype, "x", {
           get: function () { return this._x; },
+          set: function (x) { this._x=x; },
           enumerable: true,
           configurable: true
       });
       Object.defineProperty(Box.prototype, "y", {
           get: function () { return this._y; },
+          set: function (y) { this._y=y; },
           enumerable: true,
           configurable: true
       });
       Object.defineProperty(Box.prototype, "width", {
           get: function () { return this._width; },
+          set: function (w) { this._width=w; },
           enumerable: true,
           configurable: true
       });
       Object.defineProperty(Box.prototype, "height", {
           get: function () { return this._height; },
+          set: function (h) { this._height=h; },
           enumerable: true,
           configurable: true
       });
@@ -769,6 +773,7 @@
       });
       Object.defineProperty(ObjectDetection.prototype, "box", {
           get: function () { return this._box; },
+          set: function (box) { this._box=box; },
           enumerable: true,
           configurable: true
       });
